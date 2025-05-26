@@ -2,7 +2,7 @@
 
 MCP Server for Affinity CRM (www.affinity.co) - enables AI assistants to access deal flow, relationship data, and investment insights through the Model Context Protocol.
 
-## 🎯 Intended Use
+## Intended Use
 
 This server is designed for **authorized business integration** of Affinity CRM data. Please ensure you have proper permissions and follow [responsible use guidelines](GUIDELINES.md).
 
