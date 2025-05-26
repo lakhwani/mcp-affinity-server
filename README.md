@@ -1,21 +1,55 @@
 # Affinity MCP Server
 
-- MCP Server for Affinity (www.affinity.co)
+MCP Server for Affinity (www.affinity.co)
 
-## Set up
+## Quick Start
 
-1. Install UV (Python package manager) - not recommended to use Pip or Pypi due to higher complexity
-2.
+### 1. Install UV
 
-# Initial MCP set up
+Install UV Python package manager (recommended over pip for simpler dependency management)
 
-1. uv init . (set up inside your current directory)
-2. uv add "mcp [cli]" (will add .venv)
-3. mcp install main.py (containing mcp server code)
-4. (optional) mcp dev main.py (uses MCP Inspector to test)
-5. On Claude, File -> Settings -> Developer -> Edit Config (claude_desktop_config) to check if MCP server is found
+### 2. Test the Server (using MCP Inspector)
 
-# Common errors
+```bash
+mcp dev main.py
+```
 
-1. After adding MCP servers in config, may not show up immediately. End the Claude Desktop task from the Task Manager and then reopen after few seconds.
-2. If still not working, put absolute path for where uv is installed, by running "which uv", "where uv", "where uv.exe", find the default installation location is in C:\Users\User\.local\bin if installed with Powershell. Use \\ when setting up in the Claude Server "command" to \\uv.exe at the end.
+### 3. Add to Claude Desktop
+
+```bash
+mcp install main.py
+```
+
+To verify, go to: **File → Settings → Developer → Edit Config**
+Check MCP server configuration to `claude_desktop_config.json`
+
+## Setup (First Time Only)
+
+### 1. Install UV
+
+Install UV Python package manager (recommended over pip for simpler dependency management)
+
+### 2. Create MCP Server
+
+```bash
+uv init .
+uv add "mcp[cli]"
+mcp install main.py
+```
+
+## Troubleshooting
+
+**Server not appearing after config change:**
+
+- Close Claude Desktop completely via Task Manager
+- Wait a few seconds, then reopen
+
+**Server still not working:**
+
+- Find UV path: `which uv` (Mac/Linux) or `where uv.exe` (Windows)
+- Use absolute path in config (typically `C:\Users\User\.local\bin\uv.exe` on Windows)
+- Use `\\` for Windows paths in JSON config
+
+**In error logs, with TLS error**
+
+- Add to Claude config the following flag: "--native-tls" into the top of args.
