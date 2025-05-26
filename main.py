@@ -1,3 +1,18 @@
+"""
+Affinity CRM MCP Server
+
+INTENDED USE: Authorized business integration only. Users must:
+- Have proper API authorization
+- Comply with applicable laws and regulations
+- Respect Affinity's terms of service
+- Implement appropriate security measures
+
+See GUIDELINES.md for details.
+
+@license MIT
+@author Nikhil Lakhwani
+"""
+
 from mcp.server.fastmcp import FastMCP
 import os
 import httpx
