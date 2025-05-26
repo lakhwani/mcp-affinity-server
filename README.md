@@ -35,7 +35,7 @@ mcp install main.py
 To verify, go to: **File → Settings → Developer → Edit Config**
 Check MCP server configuration to `claude_desktop_config.json`
 
-## Setup (First Time Only)
+## Quick setup guide for setting up your first MCP server
 
 ### 1. Install UV
 
